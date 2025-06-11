@@ -1,5 +1,10 @@
 import streamlit as st
 
-st.title("New Clean Setup")
-st.write("Hello from the fresh project!")
-st.write("This line is from the feature/test-branch!")
+st.title("My Shopping List")
+
+shopping_items = ["Bananas", "Apples", "Salad", "Pasta", "Milk"]
+
+st.write("Here is your list:")
+
+for item in shopping_items:
+    st.write(f"• {item}")
