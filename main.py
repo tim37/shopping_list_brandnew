@@ -8,7 +8,7 @@ if "shopping_items" not in st.session_state:
 st.title("Shopping List")
 
 # Show current items
-st.write("Current items:")
+st.write("Current items are:")
 for item in st.session_state.shopping_items:
     st.write(f"- {item}")
 
@@ -19,7 +19,7 @@ new_item = st.text_input("Add a new item:")
 if st.button("Add item"):
     if new_item.strip():  # Check that input isn't empty or just spaces
         st.session_state.shopping_items.append(new_item.strip())
-        st.success(f'Added "{new_item.strip()}" to the list.')
+        st.success(f'OK, added "{new_item.strip()}" to the list.')
     else:
         st.warning("Please enter a valid item.")
 
